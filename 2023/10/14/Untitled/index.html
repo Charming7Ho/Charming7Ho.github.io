@@ -2,7 +2,7 @@
 <html>
 	<head>
 		
-<title>Hello World-Palace</title>
+<title>C语言 C1.-Palace</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -284,7 +284,7 @@
             
         </ul>
         
-        <h1>Hello World</h1>
+        <h1>C语言 C1.</h1>
         <div class="post-header-info">
             <div class="post-header-info-author">
                 
@@ -299,7 +299,7 @@
                 <div class="post-header-info-author-categories">
                     
                 </div>
-                <p>2023-10-07 08:03:19</p>
+                <p>2023-10-14 22:00:55</p>
             </div>
         </div>
     </div>
@@ -309,19 +309,41 @@
   <div id="article" class="post-content-info">
     
 
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <h2 id="C语言入门"><a href="#C语言入门" class="headerlink" title="C语言入门"></a>C语言入门</h2><h4 id="C语言是一种面向过程的编程语言"><a href="#C语言是一种面向过程的编程语言" class="headerlink" title="C语言是一种面向过程的编程语言"></a>C语言是一种面向过程的编程语言</h4><blockquote>
+<ul>
+<li>PHP、Python 等都是用C语言开发出来的，虽然平时做项目的时候看不到C语言的影子，但是如果想深入学习 PHP 和 Python，那就要有C语言基础了。</li>
+<li>C++ 和 Objective-C 干脆在C语言的基础上直接进行扩展，增加一些新功能后变成了新的语言，所以学习 C++ 和 Objective-C 之前也要先学习C语言。</li>
+</ul>
+</blockquote>
+<h4 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h4><p>对于十进制的数 想转换为<strong>X</strong>进制的数</p>
+<p>整数部分：<font color="RED"> <strong>除 N 取余，逆序排列</strong><br><font color="black"><br><img src="/%5Cimages%5Cpasted-0.png" alt="pasted"></p>
+<p>小数部分：<font color="RED"> <strong>乘 N 取整，顺序排列</strong><br><font color="black"></p>
+<p><img src="/%5Cimages%5Cpasted-1.png" alt="pasted"></p>
+<h4 id="数据存储与内存是什么样的"><a href="#数据存储与内存是什么样的" class="headerlink" title="数据存储与内存是什么样的"></a>数据存储与内存是什么样的</h4><p>1个元器件称为1比特（Bit）或1位，8个元器件称为1字节（Byte），那么16个元器件就是2Byte，32个就是4Byte，以此类推：</p>
+<ul>
+<li>8×1024个元器件就是1024Byte，简写为1KB；</li>
+<li>8×1024×1024个元器件就是1024KB，简写为1MB；</li>
+<li>8×1024×1024×1024个元器件就是1024MB，简写为1GB。</li>
+</ul>
+<p>单位的换算</p>
+<ul>
+<li>1Byte &#x3D; 8 Bit</li>
+<li>1KB &#x3D; 1024Byte &#x3D; 210Byte</li>
+<li>1MB &#x3D; 1024KB &#x3D; 220Byte</li>
+<li>1GB &#x3D; 1024MB &#x3D; 230Byte</li>
+<li>1TB &#x3D; 1024GB &#x3D; 240Byte</li>
+<li>1PB &#x3D; 1024TB &#x3D; 250Byte</li>
+<li>1EB &#x3D; 1024PB &#x3D; 260Byte</li>
+</ul>
+<p>并且CPU直接与内存打交道，它会读取内存中的数据进行处理，并将结果保存到内存。如果需要保存到硬盘，才会将内存中的数据复制到硬盘。</p>
+<p>例如，打开Word文档，输入一些文字，虽然我们看到的不一样了，但是硬盘中的文档没有改变，新增的文字暂时保存到了内存，Ctrl+S才会保存到硬盘。因为内存断电后会丢失数据，所以如果你编辑完Word文档忘记保存就关机了，那么你将永远无法找回这些内容。</p>
+<h4 id="ASCII码，GBK码，Unicode字符集"><a href="#ASCII码，GBK码，Unicode字符集" class="headerlink" title="ASCII码，GBK码，Unicode字符集"></a>ASCII码，GBK码，Unicode字符集</h4><p>特定的文字必然对应着固定的二进制，否则在转换时将发生混乱。那么，怎样将文字与二进制对应起来呢？这就需要有一套规范，计算机公司和软件开发者都必须遵守，这样的一套规范就称为字符集（Character Set）或者字符编码（Character Encoding）。</p>
+<ul>
+<li>严格来说，字符集和字符编码不是一个概念，字符集定义了文字和二进制的对应关系，为字符分配了唯一的编号，而字符编码规定了如何将文字的编号存储到计算机中。</li>
+</ul>
+<p><strong>字符集为每个字符分配一个唯一的编号，类似于学生的学号，通过编号就能够找到对应的字符。</strong></p>
+<p>ASCII编码将128个字符所保存下来</p>
+<p><a target="_blank" rel="noopener" href="https://ts1.cn.mm.bing.net/th/id/R-C.56b914ac12fe39cee5ec607d6e022f6f?rik=uoNMMd8+OqnDmg&riu=http://www.charstable.com/_site_media/ascii/chars-table-landscape.jpg&ehk=+ObQP3q+8N4urt054Ue9T/L7wNDBDfUrWN2uHxyglP0=&risl=&pid=ImgRaw&r=0">ASCII码表</a></p>
 
   </div>
   <div id="gitalk-container"></div>
@@ -382,7 +404,21 @@ Fancybox.bind('[data-fancybox="fancybox-gallery-img"]', {
 
     <div class="post-paging">
     
+    <a href="/2023/10/18/C%E8%AF%AD%E8%A8%80-C2/">
+        <div class="post-paging-last">
+            <span>上一篇</span>
+            <p>C语言 C2.</p>
+        </div>
+    </a>
+    
 
+    
+    <a href="/2023/10/13/hello-world/">
+        <div class="post-paging-next">
+            <span>下一篇</span>
+            <p>记忆宫殿简介</p>
+        </div>
+    </a>
     
 </div>
 </div>
