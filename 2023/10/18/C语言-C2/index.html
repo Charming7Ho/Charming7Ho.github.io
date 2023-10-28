@@ -25,11 +25,14 @@
 <meta property="og:site_name" content="Charming">
 <meta property="og:description" content="变量及数据类型数据类型内存中的数据有多种解释方式，使用之前必须要确定；int a;就表明，这份数据是整数，不能理解为像素、声音等。int 有一个专业的称呼，叫做数据类型（Data Type）。 顾名思义，数据类型用来说明数据的类型，确定了数据的解释方式，让计算机和程序员不会产生歧义。在C语言中，有多种数据类型，例如： |数据类型|字符型|	短整型|	整型|	长整型|	单精度浮点型|	双精度浮点型|">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://charming7ho.github.io/images/bumayuanma.jpg">
+<meta property="og:image" content="http://charming7ho.github.io/images/zhishu.png">
 <meta property="article:published_time" content="2023-10-18T02:06:21.000Z">
-<meta property="article:modified_time" content="2023-10-19T03:15:08.632Z">
+<meta property="article:modified_time" content="2023-10-19T04:30:28.264Z">
 <meta property="article:author" content="Charming Ho">
 <meta property="article:tag" content="Charming">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://charming7ho.github.io/images/bumayuanma.jpg">
     
     
     <!--- Icon Part-->
@@ -436,8 +439,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-10-19 11:15:08</span>
-            <span class="mobile">2023-10-19 11:15:08</span>
+            <span class="desktop">2023-10-19 12:30:28</span>
+            <span class="mobile">2023-10-19 12:30:28</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -466,7 +469,7 @@
         <div class="article-content markdown-body">
             <h2 id="变量及数据类型"><a href="#变量及数据类型" class="headerlink" title="变量及数据类型"></a>变量及数据类型</h2><h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p>内存中的数据有多种解释方式，使用之前必须要确定；int a;就表明，这份数据是整数，不能理解为像素、声音等。int 有一个专业的称呼，叫做数据类型（Data Type）。</p>
 <p>顾名思义，数据类型用来说明数据的类型，确定了数据的解释方式，让计算机和程序员不会产生歧义。在C语言中，有多种数据类型，例如：</p>
-<p>|数据类型|字符型|	短整型|	整型|	长整型|	单精度浮点型|	双精度浮点型|	无类型<br>|–|-|<br>|定义说明方式|char|	short|	int|	long|	float|	double|	void|<br>|长  度(字节)	|1|	2|	4|	4	|4|	8| 空|</p>
+<p>|数据类型|字符型|	短整型|	整型|	长整型|	单精度浮点型|	双精度浮点型|	无类型|<br>|–|-|<br>|定义说明方式|char|	short|	int|	long|	float|	double|	void|<br>|长  度(字节)	|1|	2|	4|	4	|4|	8| 空|</p>
 <p>这些是最基本的数据类型，是C语言自带的，如果我们需要，还可以通过它们组成更加复杂的数据类型，后面我们会一一讲解。</p>
 <p>除了C语言，Java、C++、C#等在定义变量时也必须指明数据类型，这样的编程语言称为<strong>强类型语言</strong>。而PHP、JavaScript等在定义变量时不必指明数据类型，编译系统会自动推演，这样的编程语言称为<strong>弱类型语言</strong>。</p>
 <p><strong>强类型语言</strong>一旦确定了数据类型，就不能再赋给其他类型的数据，除非对数据类型进行转换。<strong>弱类型语言</strong>没有这种限制，一个变量，可以先赋给一个整数，然后再赋给一个字符串。</p>
@@ -477,10 +480,40 @@
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//合法的八进制数</span><br><span class="line">int a = 015;  //换算成十进制为 13</span><br><span class="line">int b = -0101;  //换算成十进制为 -65</span><br><span class="line">int c = 0177777;  //换算成十进制为 65535</span><br><span class="line">//非法的八进制</span><br><span class="line">int m = 256;  //无前缀 0，相当于十进制</span><br><span class="line">int n = 03A2;  //A不是有效的八进制数字</span><br></pre></td></tr></table></figure></div>
 
 <p>八进制输出格式<code>%o</code></p>
-<p>3.十六进制由数字 0<del>9、字母 A</del>F 或 a~f（不区分大小写）组成，使用时必须以0x或0X（不区分大小写）开头，例如：</p>
+<p>3.十六进制由数字 0-9、字母 A~F 或 a-f（不区分大小写）组成，使用时必须以0x或0X（不区分大小写）开头，例如：</p>
 <div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//合法的十六进制</span><br><span class="line">int a = 0X2A;  //换算成十进制为 42</span><br><span class="line">int b = -0XA0;  //换算成十进制为 -160</span><br><span class="line">int c = 0xffff;  //换算成十进制为 65535</span><br><span class="line">//非法的十六进制</span><br><span class="line">int m = 5A;  //没有前缀 0X，是一个无效数字</span><br><span class="line">int n = 0X3H;  //H不是有效的十六进制数字</span><br></pre></td></tr></table></figure></div>
 
 <p>十六进制输出格式：<code>%x</code></p>
+<h4 id="整数在计算机内存中存储方式"><a href="#整数在计算机内存中存储方式" class="headerlink" title="整数在计算机内存中存储方式"></a>整数在计算机内存中存储方式</h4><p>在计算机内存中，整数一律采用补码的方式进行存储</p>
+<p>正数原码补码反码都一样</p>
+<p>负数的反码是原码取反(0变1，1变0)，补码是反码+1</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/bumayuanma.jpg"
+                      alt="BUMAYUANMA"
+                ></p>
+<p>补码的设计巧妙又聪明，将计算机的加减法合理的简化，精简硬件电路</p>
+<h4 id="浮点数存储"><a href="#浮点数存储" class="headerlink" title="浮点数存储"></a>浮点数存储</h4><p>C语言标准规定，小数在内存中以科学计数法的形式来存储，具体形式为：</p>
+<p>flt &#x3D; (-1)sign × mantissa × base+exponent</p>
+<p>对各个部分的说明：</p>
+<ul>
+<li>flt 是要表示的小数。</li>
+<li>sign 用来表示 flt 的正负号，它的取值只能是 0 或 1：取值为 0 表示 flt 是正数，取值为 1 表示 flt 是负数。</li>
+<li>base 是基数，或者说进制，它的取值大于等于 2（例如，2 表示二进制、10 表示十进制、16 表示十六进制……）。数学中常见的科学计数法是基于十进制的，例如 6.93 × 1013；计算机中的科学计数法可以基于其它进制，例如 1.001 × 27 就是基于二进制的，它等价于 1001 0000。</li>
+<li>mantissa 为尾数，或者说精度，是 base 进制的小数，并且 1 ≤ mantissa ＜ base，这意味着，小数点前面只能有一位数字；</li>
+<li>exponent 为指数，是一个整数，可正可负，并且为了直观一般采用十进制表示。</li>
+</ul>
+<p>虽然C语言标准没有规定 base 使用哪种进制，但是在实际应用中，各种编译器都将 base 实现为二进制，这样不仅贴近计算机硬件（任何数据在计算机底层都以二进制形式表示），还能减少转换次数。</p>
+<p>float double 存储方式：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/images/zhishu.png"
+                      alt="ZHISHU"
+                ></p>
+<p>浮点数的内存被分成了三部分，分别用来存储符号 sign、尾数 mantissa 和指数 exponent ，当浮点数的类型确定后，每一部分的位数就是固定的。</p>
+<p>符号 sign 可以不加修改直接放入内存中，尾数 mantissa 只需要将小数部分放入内存中，最让人疑惑的是指数 exponent 如何放入内存中呢？</p>
+<p>float 的指数部分占用 8 Bits，能表示从 0~255 的值，取其中间值 127，指数在写入内存前先加上127，读取时再减去127，正数负数就显而易见了。19.625 转换后的指数为 4，4+127 &#x3D; 131，131 换算成二进制为 1000 0011，这就是 19.626 的指数部分在 float 中的最终存储形式。<br>先确定内存中指数部分的取值范围，得到一个中间值，写入指数时加上这个中间值，读取指数时减去这个中间值，这样符号和值就都能确定下来了。</p>
 
         </div>
 
@@ -495,7 +528,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-10-19 11:15:08
+                    :</strong> 2023-10-19 12:30:28
             </li>
         
         <li>
@@ -522,6 +555,21 @@
 
         
             <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/10/19/C%E8%AF%AD%E8%A8%80-C3/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">C语言 C3.</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
                 
                 
                     <div class="article-next">
