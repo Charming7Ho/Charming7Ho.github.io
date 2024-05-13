@@ -13,26 +13,30 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://Charming7Ho.github.io/2023/10/14/untitled/"/>
+    <link rel="canonical" href="http://Charming7Ho.github.io/2023/11/02/f/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="C语言入门C语言是一种面向过程的编程语言  PHP、Python 等都是用C语言开发出来的，虽然平时做项目的时候看不到C语言的影子，但是如果想深入学习 PHP 和 Python，那就要有C语言基础了。 C++ 和 Objective-C 干脆在C语言的基础上直接进行扩展，增加一些新功能后变成了新的语言，所以学习 C++ 和 Objective-C 之前也要先学习C语言。   进制转换对于十进制的数">
+        <meta name="description" content="先安装vsftpd软件包：1.通过sudo apt -get install vsftpd 这条命令安装 2.配置vsftpd服务器配置文件:首先通过命令sudo vim &#x2F;etc&#x2F;vsftpd.conf打开文件 将写入权限write_enable&#x3D;NO改为write_enable&#x3D;YES使用户可以上传文件到服务器  3.创建一个用户通过 sudo addu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C语言 C1.">
-<meta property="og:url" content="http://charming7ho.github.io/2023/10/14/Untitled/index.html">
+<meta property="og:title" content="ftp服务器建立局域网内共享">
+<meta property="og:url" content="http://charming7ho.github.io/2023/11/02/f/index.html">
 <meta property="og:site_name" content="Charming">
-<meta property="og:description" content="C语言入门C语言是一种面向过程的编程语言  PHP、Python 等都是用C语言开发出来的，虽然平时做项目的时候看不到C语言的影子，但是如果想深入学习 PHP 和 Python，那就要有C语言基础了。 C++ 和 Objective-C 干脆在C语言的基础上直接进行扩展，增加一些新功能后变成了新的语言，所以学习 C++ 和 Objective-C 之前也要先学习C语言。   进制转换对于十进制的数">
+<meta property="og:description" content="先安装vsftpd软件包：1.通过sudo apt -get install vsftpd 这条命令安装 2.配置vsftpd服务器配置文件:首先通过命令sudo vim &#x2F;etc&#x2F;vsftpd.conf打开文件 将写入权限write_enable&#x3D;NO改为write_enable&#x3D;YES使用户可以上传文件到服务器  3.创建一个用户通过 sudo addu">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://charming7ho.github.io/images/pasted-0.png">
-<meta property="og:image" content="http://charming7ho.github.io/images/pasted-1.png">
-<meta property="article:published_time" content="2023-10-14T14:00:55.000Z">
-<meta property="article:modified_time" content="2023-12-05T03:01:12.961Z">
+<meta property="og:image" content="http://charming7ho.github.io/%5Cimages%5Cvsftpd.jpg">
+<meta property="og:image" content="http://charming7ho.github.io/%5Cimages%5Cconfig.png">
+<meta property="og:image" content="http://charming7ho.github.io/%5Cimages%5Clog.jpg">
+<meta property="og:image" content="http://charming7ho.github.io/%5Cimages%5Cuser.jpg">
+<meta property="og:image" content="http://charming7ho.github.io/%5Cimages%5Clogin.jpg">
+<meta property="og:image" content="http://charming7ho.github.io/%5Cimages%5Cftp.jpg">
+<meta property="article:published_time" content="2023-11-02T01:11:44.000Z">
+<meta property="article:modified_time" content="2024-01-04T09:00:21.030Z">
 <meta property="article:author" content="Charming Ho">
 <meta property="article:tag" content="Charming">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://charming7ho.github.io/images/pasted-0.png">
+<meta name="twitter:image" content="http://charming7ho.github.io/%5Cimages%5Cvsftpd.jpg">
     
     
     <!--- Icon Part-->
@@ -44,7 +48,7 @@
     
     <title>
         
-            C语言 C1. -
+            ftp服务器建立局域网内共享 -
         
         Chamring&#39;s Palace
     </title>
@@ -410,7 +414,7 @@
 
         <div class="article-title">
             
-                <h1 class="article-title-regular">C语言 C1.</h1>
+                <h1 class="article-title-regular">ftp服务器建立局域网内共享</h1>
             
             </div>
             
@@ -432,15 +436,15 @@
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
         <i class="fa-regular fa-pen-fancy"></i>&nbsp;
-        <span class="desktop">2023-10-14 22:55</span>
-        <span class="mobile">2023-10-14 22:55</span>
+        <span class="desktop">2023-11-02 09:11:44</span>
+        <span class="mobile">2023-11-02 09:11:44</span>
         <span class="hover-info">创建</span>
     </span>
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2023-12-05 11:01:12</span>
-            <span class="mobile">2023-12-05 11:01:12</span>
+            <span class="desktop">2024-01-04 17:21</span>
+            <span class="mobile">2024-01-04 17:21</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -467,51 +471,45 @@
 
 
         <div class="article-content markdown-body">
-            <h2 id="C语言入门"><a href="#C语言入门" class="headerlink" title="C语言入门"></a>C语言入门</h2><h4 id="C语言是一种面向过程的编程语言"><a href="#C语言是一种面向过程的编程语言" class="headerlink" title="C语言是一种面向过程的编程语言"></a>C语言是一种面向过程的编程语言</h4><blockquote>
-<ul>
-<li>PHP、Python 等都是用C语言开发出来的，虽然平时做项目的时候看不到C语言的影子，但是如果想深入学习 PHP 和 Python，那就要有C语言基础了。</li>
-<li>C++ 和 Objective-C 干脆在C语言的基础上直接进行扩展，增加一些新功能后变成了新的语言，所以学习 C++ 和 Objective-C 之前也要先学习C语言。</li>
-</ul>
-</blockquote>
-<h4 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h4><p>对于十进制的数 想转换为<strong>X</strong>进制的数</p>
-<p>整数部分：<font color="RED"> <strong>除 N 取余，逆序排列</strong><br><font color="black"><br><img  
+            <h4 id="先安装vsftpd软件包："><a href="#先安装vsftpd软件包：" class="headerlink" title="先安装vsftpd软件包："></a>先安装vsftpd软件包：</h4><h6 id="1-通过sudo-apt-get-install-vsftpd-这条命令安装"><a href="#1-通过sudo-apt-get-install-vsftpd-这条命令安装" class="headerlink" title="1.通过sudo apt -get install vsftpd 这条命令安装"></a>1.通过sudo apt -get install vsftpd 这条命令安装</h6><p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/pasted-0.png"
-                      alt="pasted0"
+                     data-src="/%5Cimages%5Cvsftpd.jpg"
+                      alt="vsftpd"
                 ></p>
-<p>小数部分：<font color="RED"> <strong>乘 N 取整，顺序排列</strong><br><font color="black"></p>
+<h4 id="2-配置vsftpd服务器配置文件"><a href="#2-配置vsftpd服务器配置文件" class="headerlink" title="2.配置vsftpd服务器配置文件:"></a>2.配置vsftpd服务器配置文件:</h4><p>首先通过命令sudo vim &#x2F;etc&#x2F;vsftpd.conf打开文件</p>
+<p>将写入权限write_enable&#x3D;NO改为write_enable&#x3D;YES<br>使用户可以上传文件到服务器<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/%5Cimages%5Cconfig.png"
+                      alt="config"
+                ></p>
 <p><img  
                      lazyload
                      src="/images/loading.svg"
-                     data-src="/images/pasted-1.png"
-                      alt="pasted1"
+                     data-src="/%5Cimages%5Clog.jpg"
+                      alt="LOG"
                 ></p>
-<h4 id="数据存储与内存是什么样的"><a href="#数据存储与内存是什么样的" class="headerlink" title="数据存储与内存是什么样的"></a>数据存储与内存是什么样的</h4><p>1个元器件称为1比特（Bit）或1位，8个元器件称为1字节（Byte），那么16个元器件就是2Byte，32个就是4Byte，以此类推：</p>
-<ul>
-<li>8×1024个元器件就是1024Byte，简写为1KB；</li>
-<li>8×1024×1024个元器件就是1024KB，简写为1MB；</li>
-<li>8×1024×1024×1024个元器件就是1024MB，简写为1GB。</li>
-</ul>
-<p>单位的换算</p>
-<ul>
-<li>1Byte &#x3D; 8 Bit</li>
-<li>1KB &#x3D; 1024Byte &#x3D; 210Byte</li>
-<li>1MB &#x3D; 1024KB &#x3D; 220Byte</li>
-<li>1GB &#x3D; 1024MB &#x3D; 230Byte</li>
-<li>1TB &#x3D; 1024GB &#x3D; 240Byte</li>
-<li>1PB &#x3D; 1024TB &#x3D; 250Byte</li>
-<li>1EB &#x3D; 1024PB &#x3D; 260Byte</li>
-</ul>
-<p>并且CPU直接与内存打交道，它会读取内存中的数据进行处理，并将结果保存到内存。如果需要保存到硬盘，才会将内存中的数据复制到硬盘。</p>
-<p>例如，打开Word文档，输入一些文字，虽然我们看到的不一样了，但是硬盘中的文档没有改变，新增的文字暂时保存到了内存，Ctrl+S才会保存到硬盘。因为内存断电后会丢失数据，所以如果你编辑完Word文档忘记保存就关机了，那么你将永远无法找回这些内容。</p>
-<h4 id="ASCII码，GBK码，Unicode字符集"><a href="#ASCII码，GBK码，Unicode字符集" class="headerlink" title="ASCII码，GBK码，Unicode字符集"></a>ASCII码，GBK码，Unicode字符集</h4><p>特定的文字必然对应着固定的二进制，否则在转换时将发生混乱。那么，怎样将文字与二进制对应起来呢？这就需要有一套规范，计算机公司和软件开发者都必须遵守，这样的一套规范就称为字符集（Character Set）或者字符编码（Character Encoding）。</p>
-<ul>
-<li>严格来说，字符集和字符编码不是一个概念，字符集定义了文字和二进制的对应关系，为字符分配了唯一的编号，而字符编码规定了如何将文字的编号存储到计算机中。</li>
-</ul>
-<p><strong>字符集为每个字符分配一个唯一的编号，类似于学生的学号，通过编号就能够找到对应的字符。</strong></p>
-<p>ASCII编码将128个字符所保存下来</p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://ts1.cn.mm.bing.net/th/id/R-C.56b914ac12fe39cee5ec607d6e022f6f?rik=uoNMMd8+OqnDmg&riu=http://www.charstable.com/_site_media/ascii/chars-table-landscape.jpg&ehk=+ObQP3q+8N4urt054Ue9T/L7wNDBDfUrWN2uHxyglP0=&risl=&pid=ImgRaw&r=0" >ASCII码表 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h4 id="3-创建一个用户"><a href="#3-创建一个用户" class="headerlink" title="3.创建一个用户"></a>3.创建一个用户</h4><p>通过 sudo adduser class401命令来创建<br>并且创建用户class401的密码</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/%5Cimages%5Cuser.jpg"
+                      alt="user"
+                ></p>
+<h4 id="4-启动服务并检查状态"><a href="#4-启动服务并检查状态" class="headerlink" title="4.启动服务并检查状态"></a>4.启动服务并检查状态</h4><p>通过命令 sudo service vsftpd restart 进行服务器重新启动<br>通过命令 sudo service vsftpd status 检查服务器运行状态</p>
+<h4 id="5-其他主机访问ftp服务器"><a href="#5-其他主机访问ftp服务器" class="headerlink" title="5.其他主机访问ftp服务器"></a>5.其他主机访问ftp服务器</h4><p>在Windows上文件资源管理器上输入<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/%5Cimages%5Clogin.jpg"
+                      alt="user"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="/%5Cimages%5Cftp.jpg"
+                      alt="user"
+                ></p>
+<p>搭建完成！<br>这个ftp服务器建立还是比较简单的，对于局域网内共享文件速度快（但同样是基于网速来决定的）但是便携传输程度高</p>
 
         </div>
 
@@ -519,18 +517,18 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li><strong>标题:</strong> C语言 C1.</li>
+        <li><strong>标题:</strong> ftp服务器建立局域网内共享</li>
         <li><strong>作者:</strong> Charming Ho</li>
         <li><strong>创建于
-                :</strong> 2023-10-14 22:00:55</li>
+                :</strong> 2023-11-02 09:11:44</li>
         
             <li>
                 <strong>更新于
-                    :</strong> 2023-12-05 11:01:12
+                    :</strong> 2024-01-04 17:00:21
             </li>
         
         <li>
-            <strong>链接:</strong> https://redefine.ohevan.com/2023/10/14/Untitled/
+            <strong>链接:</strong> https://redefine.ohevan.com/2023/11/02/f/
         </li>
         <li>
             <strong>
@@ -554,29 +552,14 @@
         
             <div class="article-nav">
                 
-                    <div class="article-prev">
-                        <a class="prev"
-                        rel="prev"
-                        href="/2023/10/18/C%E8%AF%AD%E8%A8%80-C2/"
-                        >
-                            <span class="left arrow-icon flex justify-center items-center">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </span>
-                            <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">C语言 C2.</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                        </a>
-                    </div>
-                
                 
                     <div class="article-next">
                         <a class="next"
                         rel="next"
-                        href="/2023/10/13/hello-world/"
+                        href="/2023/10/19/C%E8%AF%AD%E8%A8%80-C3/"
                         >
                             <span class="title flex justify-center items-center">
-                                <span class="post-nav-title-item">记忆宫殿简介</span>
+                                <span class="post-nav-title-item">C语言 C3.</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex justify-center items-center">
@@ -641,8 +624,8 @@
             <div class="post-toc-wrap">
     <div class="post-toc">
         <div class="toc-title">此页目录</div>
-        <div class="page-title">C语言 C1.</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8"><span class="nav-text">C语言入门</span></a></li></ol>
+        <div class="page-title">ftp服务器建立局域网内共享</div>
+        
 
     </div>
 </div>
